@@ -86,6 +86,11 @@
     <textarea id="codeArea4" rows="10" cols="50" readonly>javascript:void%20function(){var%20e=document.getElementById(%22dspmodal%22);e%26%26e.parentNode.removeChild(e);var%20t=document.querySelector(%22body.story.wps-body-main.paywalled%22);t%26%26(t.style.overflow=%22auto%22,t.style.position=%22static%22,t.style.width=%22auto%22);var%20n=document.querySelectorAll(%22div[id^=\%22zone-el\%22]%22);n.forEach(function(e){e.parentNode.removeChild(e)});var%20ads=document.querySelectorAll(%22.htl-ad-gpt%22);ads.forEach(function(ad){ad.parentNode.removeChild(ad)});var%20popup=document.querySelector(%22div[style*=\%22position:fixed\%22][style*=\%22background:rgba(0,0,0,0.6)\%22]%22);popup%26%26popup.parentNode.removeChild(popup)}();
     </textarea>
 </div>
+<div class="container">
+    <button id="copyButton5" onclick="copyToClipboard('codeArea5')">Hyper-Copy⚡</button>
+    <textarea id="codeArea5" rows="10" cols="50" readonly>javascript:void%20function(){javascript:(function(){var%20text=window.getSelection().toString(),url=window.location.href,tempDiv=document.createElement(%22div%22);tempDiv.contentEditable=!0,tempDiv.innerHTML=%22%3Ca%20href=\%22%22+url+%22\%22%3E%22+text+%22%3C/a%3E%22,document.body.appendChild(tempDiv);var%20range=document.createRange();range.selectNodeContents(tempDiv);var%20selection=window.getSelection();selection.removeAllRanges(),selection.addRange(range),document.execCommand(%22copy%22),document.body.removeChild(tempDiv)})()}();
+    </textarea>
+</div>
     <span id="copyStatus"></span>
 
     <script>
