@@ -103,16 +103,23 @@
 </div>
     <span id="copyStatus"></span>
 
-    <script>
-        function copyToClipboard(codeAreaId) {
-            var codeArea = document.getElementById(codeAreaId);
-            codeArea.select();
-            document.execCommand('copy');
-
-            document.getElementById('copyStatus').innerText = 'Copied!';
-            setTimeout(() => document.getElementById('copyStatus').innerText = '', 2000);
-        };
-    </script>
+<script>
+	function copyToClipboard(codeAreaId) {
+	    var codeArea = document.getElementById(codeAreaId);
+	    codeArea.select();
+	    document.execCommand('copy');
+	
+	    // Find the associated button for the textarea
+	    var button = codeArea.previousElementSibling;
+	
+	    // Get the text from the button
+	    var buttonText = button.textContent || button.innerText;
+	
+	    // Update the copy status with the button text
+	    document.getElementById('copyStatus').innerText = 'Copied ' + buttonText + ' Code!';
+	    setTimeout(() => document.getElementById('copyStatus').innerText = '', 2000);
+	};
+</script>
 </body>
 </html>
 
