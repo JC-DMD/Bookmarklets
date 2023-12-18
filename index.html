@@ -24,7 +24,14 @@
 		margin-top: 10px;
 		margin-left: 5px;
 	}
-
+	
+	a {
+		font-family: Verdana, sans-serif;
+		font-weight: Bold;
+		font-size: 1.5rem;
+		text-decoration: none;
+	}
+	
 	button {
 		margin: 2px;
 		white-space: nowrap;
@@ -59,10 +66,7 @@
 	}
 	
 	.links {
-		font-family: Verdana, sans-serif;
-		font-weight: Bold;
-		text-decoration:none;
-		font-size: 1.5rem;
+
 	}
 </style>
 
@@ -94,7 +98,7 @@
     </textarea>
 </div>
 <div class="container">
-    <button id="copyButton5" onclick="copyToClipboard('codeArea5')"><a id="HyperCopy" href="javascript:void%20function(){javascript:(function(){var%20text=window.getSelection().toString(),url=window.location.href,tempDiv=document.createElement(%22div%22);tempDiv.contentEditable=!0,tempDiv.innerHTML=%22%3Ca%20href=\%22%22+url+%22\%22%3E%22+text+%22%3C/a%3E%22,document.body.appendChild(tempDiv);var%20range=document.createRange();range.selectNodeContents(tempDiv);var%20selection=window.getSelection();selection.removeAllRanges(),selection.addRange(range),document.execCommand(%22copy%22),document.body.removeChild(tempDiv)})()}();">⚡ Hyper-Copy</a></button>
+    <button id="copyButton5" onclick="copyToClipboard('codeArea5')">⚡ Hyper-Copy</button>
     <textarea id="codeArea5" rows="10" cols="50" readonly>javascript:void%20function(){javascript:(function(){var%20text=window.getSelection().toString(),url=window.location.href,tempDiv=document.createElement(%22div%22);tempDiv.contentEditable=!0,tempDiv.innerHTML=%22%3Ca%20href=\%22%22+url+%22\%22%3E%22+text+%22%3C/a%3E%22,document.body.appendChild(tempDiv);var%20range=document.createRange();range.selectNodeContents(tempDiv);var%20selection=window.getSelection();selection.removeAllRanges(),selection.addRange(range),document.execCommand(%22copy%22),document.body.removeChild(tempDiv)})()}();
     </textarea>
 </div>
@@ -108,10 +112,13 @@
     <textarea id="codeArea7" rows="10" cols="50" readonly>javascript:javascript:(function(){function%20overrideStyles(){var%20style=document.createElement(%22style%22);style.type=%22text/css%22,style.innerHTML=` %20%20%20%20%20%20.mat-header-row,%20.mat-row%20{ %20%20%20%20%20%20%20%20height:%20auto%20!important; %20%20%20%20%20%20%20%20padding:%201.5px%2024px%20!important; %20%20%20%20%20%20} %20%20%20%20`,document.head.appendChild(style)}function%20updateSearchResultsCount(query,resultsCount,totalCount){var%20resultsSpan=document.getElementById(%22search-results-count%22);if(!resultsSpan){resultsSpan=document.createElement(%22span%22),resultsSpan.id=%22search-results-count%22,resultsSpan.style.fontWeight=%22bold%22,resultsSpan.style.marginRight=%221rem%22,resultsSpan.style.flex=%221%22,resultsSpan.style.textAlign=%22left%22;var%20paginatorContainer=document.querySelector(%22.mat-paginator-container%22);paginatorContainer.insertBefore(resultsSpan,paginatorContainer.firstChild)}if(query){var%20resultsText=query.startsWith(%22-%22)%3F%22Search%20Results%20Excluding%20\%22%22+query.slice(1)+%22\%22%22:%22Search%20Results%20for%20\%22%22+query+%22\%22%22;resultsText+=%22:%20%22+resultsCount+%22/%22+totalCount,resultsSpan.textContent=resultsText}else%20resultsSpan.textContent=%22%22}function%20filterTable(event){var%20input=event.target.value,filter=input.toUpperCase(),exclude=filter.startsWith(%22-%22);exclude%26%26(filter=filter.slice(1));for(var%20rows=document.querySelector(%22mat-table%22).querySelectorAll(%22.mat-row,%20.mat-header-row%22),visibleCount=0,totalCount=rows.length-1,i=1;i%3Crows.length;i++){var%20cells=rows[i].querySelectorAll(%22mat-cell%22),textContent=Array.from(cells).map(cell=%3Ecell.textContent.toUpperCase()),match=textContent.some(text=%3Etext.includes(filter));exclude%26%26(match=!match),rows[i].style.display=match%3F%22%22:%22none%22,match%26%26visibleCount++}updateSearchResultsCount(input,visibleCount,totalCount)}overrideStyles(),document.title=%22EnerGov%20Tasks%22;var%20searchInput=document.createElement(%22input%22);searchInput.type=%22text%22,searchInput.placeholder=%22Search%20table...%22,searchInput.style.position=%22sticky%22,searchInput.style.top=%220%22,searchInput.style.zIndex=%221000%22,searchInput.style.marginRight=%220.8rem%22,searchInput.style.fontSize=%221rem%22,searchInput.style.height=%221.7rem%22,searchInput.style.padding=%225px%2010px%22,searchInput.style.boxShadow=%220%202px%205px%20rgba(0,%200,%200,%200.2)%22,searchInput.style.border=%221px%20solid%20rgb(204,%20204,%20204)%22,searchInput.style.background=%22white%22,searchInput.style.width=%22calc(100%25%20-%208.8rem)%22,searchInput.style.marginLeft=%224rem%22,searchInput.onkeyup=filterTable;var%20taskFilterMenu=document.querySelector(%22.task-filter-menu%22);taskFilterMenu.insertBefore(searchInput,taskFilterMenu.firstChild),updateSearchResultsCount(%22%22,0,document.querySelector(%22mat-table%22).querySelectorAll(%22.mat-row,%20.mat-header-row%22).length-1)})();
     </textarea>
 </div>
-    <span id="copyStatus"></span>
+
+<span id="copyStatus"></span>
+
 <div class="links">
-	<a id="HyperCopy" href="javascript:void%20function(){javascript:(function(){var%20text=window.getSelection().toString(),url=window.location.href,tempDiv=document.createElement(%22div%22);tempDiv.contentEditable=!0,tempDiv.innerHTML=%22%3Ca%20href=\%22%22+url+%22\%22%3E%22+text+%22%3C/a%3E%22,document.body.appendChild(tempDiv);var%20range=document.createRange();range.selectNodeContents(tempDiv);var%20selection=window.getSelection();selection.removeAllRanges(),selection.addRange(range),document.execCommand(%22copy%22),document.body.removeChild(tempDiv)})()}();">⚡ Hyper-Copy</a>
+    <a id="HyperCopy" href="javascript:void%20function(){javascript:(function(){var%20text=window.getSelection().toString(),url=window.location.href,tempDiv=document.createElement(%22div%22);tempDiv.contentEditable=!0,tempDiv.innerHTML=%22%3Ca%20href=\%22%22+url+%22\%22%3E%22+text+%22%3C/a%3E%22,document.body.appendChild(tempDiv);var%20range=document.createRange();range.selectNodeContents(tempDiv);var%20selection=window.getSelection();selection.removeAllRanges(),selection.addRange(range),document.execCommand(%22copy%22),document.body.removeChild(tempDiv)})()}();">⚡ Hyper-Copy</a>
 </div>
+	
 <script>
 	function copyToClipboard(codeAreaId) {
 	    var codeArea = document.getElementById(codeAreaId);
