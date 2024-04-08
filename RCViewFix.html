@@ -65,9 +65,9 @@
 <header>
     <h1>Review Coordinator ViewFix</h1>
 </header>
-<h3>Click the button below to copy code</h3>
+
 <div class="container">
-    <button id="copyButton" onclick="copyToClipboard('codeArea')">RC ViewFix</button>
+    <button id="copyButton" onclick="copyToClipboard('codeArea')">Click Here to Copy Code</button>
     <textarea id="codeArea" rows="10" cols="50" readonly>javascript:void(function(){const styleId='custom-dynamic-style';function updateStyle(){let styleElement=document.getElementById(styleId);if(!styleElement){styleElement=document.createElement('style');styleElement.type='text/css';styleElement.id=styleId;document.head.appendChild(styleElement);}styleElement.innerHTML=location.hash==='#/home'?".eg-fill { height: auto !important; }":"";}window.addEventListener('hashchange',updateStyle);updateStyle();})();
     </textarea>
 </div>
