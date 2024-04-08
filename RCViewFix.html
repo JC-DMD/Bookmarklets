@@ -64,7 +64,7 @@
 <header>
     <h1>Review Coordinator ViewFix</h1>
 </header>
-<h3>Click the button below to copy the code to clipboard</h3>
+<h3>Click the button below to copy code</h3>
 <div class="container">
     <button id="copyButton" onclick="copyToClipboard('codeArea')">RC ViewFix</button>
     <textarea id="codeArea" rows="10" cols="50" readonly>javascript:void(function(){const styleId='custom-dynamic-style';function updateStyle(){let styleElement=document.getElementById(styleId);if(!styleElement){styleElement=document.createElement('style');styleElement.type='text/css';styleElement.id=styleId;document.head.appendChild(styleElement);}styleElement.innerHTML=location.hash==='#/home'?".eg-fill { height: auto !important; }":"";}window.addEventListener('hashchange',updateStyle);updateStyle();})();
@@ -72,11 +72,21 @@
 </div>
     <span id="copyStatus"></span>
 &nbsp
-<h3>How to add code to Bookmarks Bar in Chrome</h3>
-<img src="/Bookmarklets/Chrome_Fix.gif" />
+	<details>
+		<summary>
+			<h3>How to add code to Bookmarks Bar in Chrome</h3>
+		</summary>
+			<img src="/Bookmarklets/Chrome_Fix.gif" />
+	</details>
+	
+	
 &nbsp
-<h3>How to add code to Bookmarks bar in Edge</h3>
-<img src="/Bookmarklets/Edge_Fix.gif" />
+	<details>
+		<summary>
+			<h3>How to add code to Bookmarks bar in Edge</h3>
+		</summary>
+			<img src="/Bookmarklets/Edge_Fix.gif" />
+	</details>
 <script>
 	function copyToClipboard(codeAreaId) {
 	    var codeArea = document.getElementById(codeAreaId);
