@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Coordinator View Fix</title>
+<style>
+	header {
+		text-align: center;
+		font-family: Verdana, sans-serif;
+		font-size: 13pt;
+		padding: 1px;
+		margin: 0;
+	}
+	
+ 	h1 {
+		margin: 0;
+	}
+
+	h3 {
+		margin: 0;
+		font-family: Verdana, sans-serif;
+		padding: 1px;
+		margin-top: 10px;
+		margin-left: 5px;
+	}
+
+	button {
+		margin: 2px;
+		white-space: nowrap;
+		height: 40px;
+		border-color: black;
+		border-width: 4px;
+		border-style: outset;
+		min-width: 14rem;
+	}
+	
+	textarea {
+		font-size: 6pt;
+		height: 40px;
+		width: 90%;
+		padding: 1px;
+		margin: 2px;
+		box-sizing: border-box;
+		grid-column: 2;
+		border-style: inset;
+		background-color: #e6e6e6;
+	}
+
+	span {
+		font-family: Verdana, sans-serif;
+		font-size: 1rem;
+	}
+	
+	.container {
+ 		display: grid; 
+		grid-template-columns: 1fr 5fr;
+  		gap: 10px 10px; 
+	}
+</style>
+
+</head>
+<body>
+<header>
+    <h1>Bookmarklets</h1>
+</header>
+<h3>EnerGov</h3>
+<div class="container">
+    <button id="copyButton" onclick="copyToClipboard('codeArea')">RC ViewFix</button>
+    <textarea id="codeArea" rows="10" cols="50" readonly>javascript:void(function(){const styleId='custom-dynamic-style';function updateStyle(){let styleElement=document.getElementById(styleId);if(!styleElement){styleElement=document.createElement('style');styleElement.type='text/css';styleElement.id=styleId;document.head.appendChild(styleElement);}styleElement.innerHTML=location.hash==='#/home'?".eg-fill { height: auto !important; }":"";}window.addEventListener('hashchange',updateStyle);updateStyle();})();
+    </textarea>
+</div>
+    <span id="copyStatus"></span>
+
+<script>
+	function copyToClipboard(codeAreaId) {
+	    var codeArea = document.getElementById(codeAreaId);
+	    codeArea.select();
+	    document.execCommand('copy');
+	    var button = codeArea.previousElementSibling;
+	    var buttonText = button.textContent || button.innerText;
+	    document.getElementById('copyStatus').innerText = 'Copied ' + buttonText + ' Code';
+	    setTimeout(() => document.getElementById('copyStatus').innerText = '', 3500);
+	};
+
+</script>
+</body>
+</html>
