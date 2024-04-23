@@ -57,6 +57,16 @@
 		grid-template-columns: 1fr 5fr;
   		gap: 10px 10px; 
 	}
+	.button {
+		margin: 2px;
+		white-space: nowrap;
+		height: 40px;
+		border-color: black;
+		border-width: 4px;
+		border-style: outset;
+		min-width: 14rem;
+		cursor: grab;
+	}
 </style>
 
 </head>
@@ -92,7 +102,8 @@
 </div>
 <h3>  Other</h3>
 <div class="container">
-	 <a href="javascript:(function(){var text=window.getSelection().toString(), url=window.location.href; var tempDiv=document.createElement('div'); tempDiv.contentEditable=true; tempDiv.innerHTML='<a href=\''+url+'\'>Link</a>'; document.body.appendChild(tempDiv); var range=document.createRange(); range.selectNodeContents(tempDiv); var selection=window.getSelection(); selection.removeAllRanges(); selection.addRange(range); document.execCommand('copy'); document.body.removeChild(tempDiv);})();" style="display:inline-block; padding:10px; background-color:#007BFF; color:white; text-decoration:none; border-radius:5px; cursor:move;">
+	 <a href="javascript:(function(){var text=window.getSelection().toString(), url=window.location.href; var tempDiv=document.createElement('div'); tempDiv.contentEditable=true; tempDiv.innerHTML='<a href=\''+url+'\'>Link</a>'; document.body.appendChild(tempDiv); var range=document.createRange(); range.selectNodeContents(tempDiv); var selection=window.getSelection(); selection.removeAllRanges(); selection.addRange(range); document.execCommand('copy'); document.body.removeChild(tempDiv);})();"
+		 class="button">
         ⚡ Hyper-Copy</a>
     <textarea id="codeArea5" rows="10" cols="50" readonly>javascript:void%20function(){javascript:(function(){var%20text=window.getSelection().toString(),url=window.location.href,tempDiv=document.createElement(%22div%22);tempDiv.contentEditable=!0,tempDiv.innerHTML=%22%3Ca%20href=\%22%22+url+%22\%22%3E%22+text+%22%3C/a%3E%22,document.body.appendChild(tempDiv);var%20range=document.createRange();range.selectNodeContents(tempDiv);var%20selection=window.getSelection();selection.removeAllRanges(),selection.addRange(range),document.execCommand(%22copy%22),document.body.removeChild(tempDiv)})()}();
     </textarea>
