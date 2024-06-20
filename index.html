@@ -140,7 +140,7 @@
 </div>
 <h3>  Other</h3>
 <div class="container">
-	<h4>Copies any text on a webpage that is currently highlighted to clipboard as a Hyperlink to said webpage/h4>
+	<h4>Copies any text on a webpage that is currently highlighted to clipboard as a Hyperlink to said webpage</h4>
 	 <a href="javascript:(function(){var text=window.getSelection().toString(), url=window.location.href; var tempDiv=document.createElement('div'); tempDiv.contentEditable=true; tempDiv.innerHTML='<a href=\''+url+'\'>Link</a>'; document.body.appendChild(tempDiv); var range=document.createRange(); range.selectNodeContents(tempDiv); var selection=window.getSelection(); selection.removeAllRanges(); selection.addRange(range); document.execCommand('copy'); document.body.removeChild(tempDiv);})();"
 		class="drag">⚡Hyper-Copy</a>
 	<button id="copyButton5" onclick="copyToClipboard('codeArea5')">⚡</button>
