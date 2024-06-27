@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarklets</title>
+<style>
+	header {
+		text-align: center;
+		font-family: Verdana, sans-serif;
+		font-size: 13pt;
+		padding: 1px;
+		margin: 0;
+	}
+	
+ 	h1 {
+		margin: 0;
+	}
+
+	h3 {
+		margin: 0;
+		font-family: Verdana, sans-serif;
+		padding: 1px;
+		margin-top: 10px;
+		margin-left: 5px;
+	}
+	
+	h4 {
+		font-family: Verdana, sans-serif;
+		font-size: x-small;
+		font-weight: normal;
+		border: inset;
+		margin: .3em;
+		padding: .2em;
+	}
+
+	h5 {
+		font-family: Verdana, sans-serif;
+		text-align: center;
+		align-content: end;
+		margin: 0;
+		
+	}		
+
+	button {
+		margin: 2px;
+		white-space: nowrap;
+		height: 48px;
+		border-color: black;
+		border-width: 4px;
+		border-style: outset;
+	}
+	
+	textarea {
+		font-size: 6pt;
+		height: 48px;
+		padding: 1px;
+		margin: 2px;
+		box-sizing: border-box;
+		border-style: inset;
+		background-color: #e6e6e6;
+	}
+
+	span {
+		font-family: Verdana, sans-serif;
+		font-size: 1rem;
+	}
+	
+	.container {
+ 		display: grid; 
+		grid-template-columns: 5fr 8fr 2fr 14fr; 
+		gap: .4em .4em;
+		
+	}
+	.drag {
+		margin: 2px;
+		white-space: nowrap;
+		height: 40px;
+		border: 4px outset black;
+		min-width: 14rem;
+		cursor: grab;
+		background-color: #e9e9ed;
+		text-align: center;
+    		font-family: Verdana, sans-serif;
+    		font-size: 13pt;
+		font-weight: bold;
+		text-decoration: none;
+		line-height: 40px;
+	}
+
+</style>
+
+</head>
+<body>
+<header>
+    <h1>Condition-Fix Bookmarklet</h1>
+</header>
+<div class="container">
+	<h5>Bookmarklet Description</h5>
+	<h5>↓ Drag this panel ↓ to your <a href="https://it.nmu.edu/docs/display-bookmarks-and-favorites-your-internet-browser"> Bookmarks Bar</a> to create a button</h5>
+	<h5>This button<br>Copies that<br>Code →</h5>
+	<h5>The code underlying the Bookmarklet (Informational)</h5>
+</div>
+<div class="container">
+	<h4>Adjusts the size and layout of a case's conditions table.</h4>
+	<a href="javascript:(function(){function%20showMessage(message){var%20modal=document.createElement(%22div%22);modal.style.cssText=%22position:fixed;top:0;left:0;width:100%25;height:100%25;background-color:rgba(0,0,0,0.4);z-index:1000;%22;var%20modalContent=document.createElement(%22div%22);modalContent.style.cssText=%22position:absolute;top:50%25;left:50%25;transform:translate(-50%25,-50%25);background:white;padding:20px;border-radius:5px;%22;modalContent.innerText=message;modal.appendChild(modalContent);document.body.appendChild(modal);modal.addEventListener(%22click%22,function(){modal.style.display=%22none%22})}var%20conditionButton=document.querySelector(%22button[aria-label^=\%22Conditions\%22]%22);if(conditionButton){var%20totalConditionsText=conditionButton.getAttribute(%22aria-label%22);var%20totalConditions=parseInt(totalConditionsText.match(/\((\d+)\)/)[1]);var%20loadedConditions=document.querySelectorAll(%22.condition-tr%22).length;if(loadedConditions%3CtotalConditions){return%20void%20showMessage(%22Not%20all%20conditions%20have%20been%20loaded.%20Please%20scroll%20until%20all%20conditions%20are%20visible%20before%20trying%20again.%22)}}else{return%20void%20showMessage(%22This%20webpage%20doesn't%20appear%20to%20have%20conditions.%20Double%20check%20your%20location%20before%20trying%20again.%22)}var%20ids={%22condition-table-column-order%22:%223em%22,%22condition-table-column-name%22:%2212em%22,%22condition-table-column-category%22:%2212em%22,%22condition-table-column-description%22:%2240em%22,%22condition-table-column-comments%22:%2215em%22,%22condition-table-column-scope-origin%22:%228em%22};for(var%20id%20in%20ids){var%20elem=document.getElementById(id);if(elem){elem.style.width=ids[id]}}var%20style=document.createElement(%22style%22);document.head.appendChild(style);style.sheet.insertRule(%22.eg-col-resizable%20tr%20td%20{%20word-break:%20normal%20!important;%20}%22,0);style.sheet.insertRule(%22md-input-container%20{%20width:%20100%25%20!important;%20}%22,1);var%20sideNav=document.querySelector(%22md-sidenav[md-component-id=eg-side-menu]%22);if(sideNav){sideNav.style.width=%22fit-content%22}})();"
+		class="drag">🪟 Condition-Fix</a>
+	<button id="copyButton9" onclick="copyToClipboard('codeArea9')">🪟</button>
+	<textarea id="codeArea9" rows="10" cols="50" readonly>javascript:(function(){function%20showMessage(message){var%20modal=document.createElement(%22div%22);modal.style.cssText=%22position:fixed;top:0;left:0;width:100%25;height:100%25;background-color:rgba(0,0,0,0.4);z-index:1000;%22;var%20modalContent=document.createElement(%22div%22);modalContent.style.cssText=%22position:absolute;top:50%25;left:50%25;transform:translate(-50%25,-50%25);background:white;padding:20px;border-radius:5px;%22;modalContent.innerText=message;modal.appendChild(modalContent);document.body.appendChild(modal);modal.addEventListener(%22click%22,function(){modal.style.display=%22none%22})}var%20conditionButton=document.querySelector(%22button[aria-label^=\%22Conditions\%22]%22);if(conditionButton){var%20totalConditionsText=conditionButton.getAttribute(%22aria-label%22);var%20totalConditions=parseInt(totalConditionsText.match(/\((\d+)\)/)[1]);var%20loadedConditions=document.querySelectorAll(%22.condition-tr%22).length;if(loadedConditions%3CtotalConditions){return%20void%20showMessage(%22Not%20all%20conditions%20have%20been%20loaded.%20Please%20scroll%20until%20all%20conditions%20are%20visible%20before%20trying%20again.%22)}}else{return%20void%20showMessage(%22This%20webpage%20doesn't%20appear%20to%20have%20conditions.%20Double%20check%20your%20location%20before%20trying%20again.%22)}var%20ids={%22condition-table-column-order%22:%223em%22,%22condition-table-column-name%22:%2212em%22,%22condition-table-column-category%22:%2212em%22,%22condition-table-column-description%22:%2240em%22,%22condition-table-column-comments%22:%2215em%22,%22condition-table-column-scope-origin%22:%228em%22};for(var%20id%20in%20ids){var%20elem=document.getElementById(id);if(elem){elem.style.width=ids[id]}}var%20style=document.createElement(%22style%22);document.head.appendChild(style);style.sheet.insertRule(%22.eg-col-resizable%20tr%20td%20{%20word-break:%20normal%20!important;%20}%22,0);style.sheet.insertRule(%22md-input-container%20{%20width:%20100%25%20!important;%20}%22,1);var%20sideNav=document.querySelector(%22md-sidenav[md-component-id=eg-side-menu]%22);if(sideNav){sideNav.style.width=%22fit-content%22}})();
+	</textarea>
+</div>
+<h3>  Bonus Bookmarklet</h3>
+<div class="container">
+	<h4>Copies any text on a webpage that is currently highlighted to clipboard as a Hyperlink to said webpage.</h4>
+	 <a href="javascript:(function(){var text=window.getSelection().toString(), url=window.location.href; var tempDiv=document.createElement('div'); tempDiv.contentEditable=true; tempDiv.innerHTML='<a href=\''+url+'\'>Link</a>'; document.body.appendChild(tempDiv); var range=document.createRange(); range.selectNodeContents(tempDiv); var selection=window.getSelection(); selection.removeAllRanges(); selection.addRange(range); document.execCommand('copy'); document.body.removeChild(tempDiv);})();"
+		class="drag">⚡Hyper-Copy</a>
+	<button id="copyButton5" onclick="copyToClipboard('codeArea5')">⚡</button>
+	<textarea id="codeArea5" rows="10" cols="50" readonly>javascript:void%20function(){javascript:(function(){var%20text=window.getSelection().toString(),url=window.location.href,tempDiv=document.createElement(%22div%22);tempDiv.contentEditable=!0,tempDiv.innerHTML=%22%3Ca%20href=\%22%22+url+%22\%22%3E%22+text+%22%3C/a%3E%22,document.body.appendChild(tempDiv);var%20range=document.createRange();range.selectNodeContents(tempDiv);var%20selection=window.getSelection();selection.removeAllRanges(),selection.addRange(range),document.execCommand(%22copy%22),document.body.removeChild(tempDiv)})()}();
+	</textarea>
+</div>
+    <span id="copyStatus"></span>
+
+<script>
+	function copyToClipboard(codeAreaId) {
+	    var codeArea = document.getElementById(codeAreaId);
+	    codeArea.select();
+	    document.execCommand('copy');
+	    var button = codeArea.previousElementSibling;
+	    var buttonText = button.textContent || button.innerText;
+	    document.getElementById('copyStatus').innerText = 'Copied ' + buttonText + ' Code';
+	    setTimeout(() => document.getElementById('copyStatus').innerText = '', 3500);
+	};
+
+</script>
+</body>
+</html>
